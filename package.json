@@ -1,0 +1,34 @@
+{
+  "name": "legends_group_investments",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "dotenv": "^10.0.0",
+    "emailjs-com": "^3.2.0",
+    "graphql": "^15.5.3",
+    "jquery": "^3.6.0",
+    "react-csv-reader": "^3.4.0",
+    "react-papaparse": "^3.18.1",
+    "recharts": "^2.1.4"
+  }
+}

@@ -1,0 +1,264 @@
+.dashboardContainer {
+  width: 100%;
+  /* height: 100%; */
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.csvReader {
+  margin: 20px;
+  font-size: 200%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.csv-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type='file' i] {
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+.graph {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-style: solid; */
+  height: 300px;
+  width: 450px;
+  margin: 10px;
+}
+
+.graphBig {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  width: 100%;
+  margin: 10px;
+}
+
+.custom-tooltip {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  margin: 15px;
+  border-radius: 7px;
+  background-color: rgb(23, 42, 105);
+}
+
+.infoBox h4 {
+  margin: 10px;
+}
+.infoBox h3 {
+  margin: 0px;
+}
+
+.infoBoxes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+  width: 20%;
+  margin-left: 40px;
+  padding: 20px;
+}
+
+.graphButtons {
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphButtons button {
+  width: 150px;
+  height: 40px;
+  font-size: 10px;
+  border-style: none;
+  border-radius: 7px;
+  margin: 10px;
+  background-color: rgb(23, 42, 105);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.graphButtons button:hover {
+  background-color: rgb(60, 63, 218);
+  transform: scale(1.05);
+}
+
+.graphButtons .active {
+  background-color: rgb(60, 63, 218);
+}
+
+.navBar {
+  position: sticky;
+  top: 0px;
+  height: 8vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  color: #1f2c5c;
+  width: 100vw;
+}
+.navBar h1 {
+  margin-left: 10px;
+}
+
+.logoutButton {
+  margin-right: 20px;
+  font-weight: bold;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1f2c5c;
+}
+
+.logoutButton:hover {
+  transform: scale(1.1);
+  color: #405dc7;
+}
+
+.dashboardBody {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dashboardBodyContainer {
+  margin-top: 40px;
+}
+
+.dataForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.dataForm input {
+  margin: 10px;
+  margin-top: 0px;
+  height: 30px;
+  width: 150px;
+  border-style: none;
+  border-radius: 7px;
+  padding: 3px;
+}
+
+.dataForm button {
+  width: 150px;
+  height: 30px;
+  border-radius: 7px;
+  border-style: none;
+  background-color: rgb(23, 42, 105);
+  position: relative;
+  top: -5px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dataForm button:hover {
+  background-color: rgb(60, 63, 218);
+  transform: scale(1.05);
+}
+
+.tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+}
+
+.tableContainer th {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.tableContainer td {
+  padding: 5px;
+}
+
+.tableContainer table {
+  background-color: rgb(23, 42, 105);
+  border-radius: 7px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.infoBox th {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.infoBox td {
+  padding: 5px;
+}

@@ -1,0 +1,17 @@
+body {
+  color: #3c4043;
+  background-color: #1a1a1d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.link:hover {
+  text-decoration: none;
+}

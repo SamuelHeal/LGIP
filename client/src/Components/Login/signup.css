@@ -1,0 +1,463 @@
+.signUpContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  width: 100%;
+  margin: auto;
+}
+
+.eyeIcon {
+  position: relative;
+  left: 100px;
+  top: -35px;
+  /* z-index: 888; */
+  margin: 0px;
+  cursor: pointer;
+}
+
+.eyeIcon2 {
+  position: relative;
+  left: 100px;
+  top: -35px;
+  /* z-index: 888; */
+  margin: 0px;
+  cursor: pointer;
+  color: #9c1616;
+}
+
+.eyeIcon:hover {
+  transform: scale(1.1);
+}
+
+.closeContainer {
+  position: sticky;
+  top: -20px;
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  z-index: 777;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.modalFrontClose {
+  height: 30px;
+  background-color: white;
+  color: black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.modalFrontClose:hover {
+  transform: scale(1.1);
+  color: red;
+  text-decoration: none;
+}
+.secondSignUpContainer {
+  /* z-index: 999; */
+  background-color: white;
+  width: 30%;
+  min-width: 240px;
+  border-radius: 7px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.signupButtonContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondLoginContainer h2 {
+  position: relative;
+  top: 30px;
+}
+
+.secondSignUpContainer p {
+  font-size: 80%;
+}
+
+.signUpContainer form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.signUpContainer form input {
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3c4043;
+  border-bottom-style: solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: #1f2c5c;
+  border-width: 1px;
+  border-radius: 0px 0px 7px 7px;
+  width: 230px;
+  margin: 10px;
+  height: 20px;
+  padding: 10px;
+}
+
+.formSelect {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3c4043;
+  border-bottom-style: solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: #1f2c5c;
+  border-width: 1px;
+  border-radius: 0px 0px 7px 7px;
+  width: 170px;
+  margin: 10px;
+  padding: 12px;
+}
+
+li {
+  margin: 5px;
+}
+
+.signUpContainer ::placeholder {
+  color: #3c4043;
+}
+
+.signupButton {
+  font-size: 90%;
+  color: white;
+  background-color: #31458db2;
+  width: 180px;
+  margin: 5px;
+  padding: 7px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.signupButton:hover {
+  background-color: #1f2c5c;
+  text-decoration: none;
+}
+
+.hideSignupButton {
+  display: none;
+}
+.termsContainer {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+.individualCheckbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.checkboxContainer {
+  position: relative;
+  top: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.termsCheckbox p {
+  margin-left: 10px;
+}
+
+.errorMsg {
+  color: red;
+  font-size: 14px;
+  margin: 5px;
+}
+
+.hideLoader {
+  display: none;
+}
+
+.loader {
+  margin: auto;
+  margin-top: 20px;
+  height: 50px;
+  width: 50px;
+}
+
+.loader svg {
+  position: relative;
+  top: 25px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 7px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.stroke-still {
+  stroke: #232323;
+}
+
+.stroke-animation {
+  -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+  animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+@-webkit-keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@-webkit-keyframes stroke-color {
+  0% {
+    stroke: #f50707;
+  }
+  24% {
+    stroke: #ff9100;
+  }
+  25% {
+    stroke: #0cd466;
+  }
+  49% {
+    stroke: #0abeeb;
+  }
+  50% {
+    stroke: #0d0dd6;
+  }
+  74% {
+    stroke: #e76814;
+  }
+  75% {
+    stroke: #0a91eb;
+  }
+  99% {
+    stroke: #a5216c;
+  }
+}
+
+@keyframes stroke-color {
+  0% {
+    stroke: #f50707;
+  }
+  24% {
+    stroke: #ff9100;
+  }
+  25% {
+    stroke: #0cd466;
+  }
+  49% {
+    stroke: #0abeeb;
+  }
+  50% {
+    stroke: #0d0dd6;
+  }
+  74% {
+    stroke: #e76814;
+  }
+  75% {
+    stroke: #0a91eb;
+  }
+  99% {
+    stroke: #a5216c;
+  }
+}
+
+.backgroundAnimation {
+  /* display: none; */
+  position: absolute;
+  z-index: -1;
+  transform: rotate(45deg);
+  right: 250px;
+}
+
+.stroke-animation1 {
+  -webkit-animation: stroke-spacing 4s ease-in, stroke-color1 8.2s linear;
+  animation: stroke-spacing 4s ease-in, stroke-color1 8.2s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+@-webkit-keyframes stroke-color1 {
+  0% {
+    stroke: rgb(23, 42, 105);
+  }
+  25% {
+    stroke: rgb(60, 63, 218);
+  }
+  50% {
+    stroke: #405dc7;
+  }
+  75% {
+    stroke: rgb(60, 63, 218);
+  }
+  100% {
+    stroke: rgb(23, 42, 105);
+  }
+}
+
+@keyframes stroke-color1 {
+  0% {
+    stroke: rgb(23, 42, 105);
+  }
+  25% {
+    stroke: rgb(60, 63, 218);
+  }
+  50% {
+    stroke: #405dc7;
+  }
+  75% {
+    stroke: rgb(60, 63, 218);
+  }
+  100% {
+    stroke: rgb(23, 42, 105);
+  }
+}
+
+@media only screen and (max-width: 1270px) {
+  .secondSignUpContainer {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .secondSignUpContainer {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .secondSignUpContainer {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 543px) {
+  .secondSignUpContainer {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .signUpContainer {
+    height: 100%;
+  }
+  .secondSignUpContainer {
+    width: 70%;
+    margin-bottom: 70px;
+    margin-top: 70px;
+  }
+  .eyeIcon {
+    left: 76px;
+  }
+  .eyeIcon2 {
+    left: 76px;
+  }
+  .signUpContainer form input {
+    width: 200px;
+  }
+  .signUpContainer form select {
+    width: 220px;
+  }
+}
+
+@media only screen and (max-width: 444px) {
+  .secondSignUpContainer {
+    margin-bottom: 50px;
+  }
+  .signUpContainer form input {
+    width: 90%;
+  }
+
+  .signUpContainer form select {
+    width: 68%;
+  }
+
+  .termsContainer {
+    width: 250px;
+    height: 400px;
+    margin: auto;
+  }
+}

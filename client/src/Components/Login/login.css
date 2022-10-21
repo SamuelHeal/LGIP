@@ -1,0 +1,328 @@
+.loginContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 95vh;
+  margin: auto;
+}
+
+.secondLoginContainer {
+  z-index: 999;
+  background-color: white;
+  width: 30%;
+  /* height: 40%; */
+  padding: 20px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loginHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.loginHeaderContainer h1 {
+  margin: 0px;
+  position: relative;
+  top: 20px;
+  margin: 10px;
+}
+
+.loginHeaderContainer h2 {
+  margin: 0px;
+}
+
+.registerLink {
+  position: relative;
+  top: -30px;
+  font-size: 80%;
+}
+
+.secondLoginContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  height: 30%;
+}
+
+.secondLoginContainer form input {
+  margin-bottom: 10px;
+  background-color: white;
+  color: #3c4043;
+  border-bottom-style: solid;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-color: #1f2c5c;
+  border-width: 1px;
+  border-radius: 0px 0px 0px 7px;
+  height: 20px;
+  width: 200px;
+  padding: 10px;
+}
+
+.secondLoginContainer ::placeholder {
+  color: #3c4043;
+}
+
+.loginButton {
+  font-size: 110%;
+  color: white;
+  background-color: #31458db2;
+  width: 120px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #1f2c5c;
+  text-decoration: none;
+}
+
+.hideLoginButton {
+  display: none;
+}
+.errorMsgLogin {
+  position: relative;
+  top: -10px;
+  margin: 2px;
+  color: red;
+}
+
+.hideLoader {
+  display: none;
+}
+
+.loader {
+  height: 50px;
+  width: 50px;
+}
+
+.loader svg {
+  position: relative;
+  top: 25px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 7px;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.stroke-still {
+  stroke: #232323;
+}
+
+.stroke-animation {
+  -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+  animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+@-webkit-keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@-webkit-keyframes stroke-color {
+  0% {
+    stroke: #f50707;
+  }
+  24% {
+    stroke: #ff9100;
+  }
+  25% {
+    stroke: #0cd466;
+  }
+  49% {
+    stroke: #0abeeb;
+  }
+  50% {
+    stroke: #0d0dd6;
+  }
+  74% {
+    stroke: #e76814;
+  }
+  75% {
+    stroke: #0a91eb;
+  }
+  99% {
+    stroke: #a5216c;
+  }
+}
+
+@keyframes stroke-color {
+  0% {
+    stroke: #f50707;
+  }
+  24% {
+    stroke: #ff9100;
+  }
+  25% {
+    stroke: #0cd466;
+  }
+  49% {
+    stroke: #0abeeb;
+  }
+  50% {
+    stroke: #0d0dd6;
+  }
+  74% {
+    stroke: #e76814;
+  }
+  75% {
+    stroke: #0a91eb;
+  }
+  99% {
+    stroke: #a5216c;
+  }
+}
+
+.backgroundAnimation {
+  position: absolute;
+  z-index: 1;
+  transform: rotate(45deg);
+  right: 250px;
+}
+
+.stroke-animation1 {
+  -webkit-animation: stroke-spacing 4s ease-in, stroke-color1 8.2s linear;
+  animation: stroke-spacing 4s ease-in, stroke-color1 8.2s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+@-webkit-keyframes stroke-color1 {
+  0% {
+    stroke: rgb(23, 42, 105);
+  }
+  25% {
+    stroke: rgb(60, 63, 218);
+  }
+  50% {
+    stroke: #405dc7;
+  }
+  75% {
+    stroke: rgb(60, 63, 218);
+  }
+  100% {
+    stroke: rgb(23, 42, 105);
+  }
+}
+
+@keyframes stroke-color1 {
+  0% {
+    stroke: rgb(23, 42, 105);
+  }
+  25% {
+    stroke: rgb(60, 63, 218);
+  }
+  50% {
+    stroke: #405dc7;
+  }
+  75% {
+    stroke: rgb(60, 63, 218);
+  }
+  100% {
+    stroke: rgb(23, 42, 105);
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .signupContainer {
+    display: none;
+  }
+
+  .secondLoginContainer {
+    border-radius: 7px;
+    width: 50%;
+    height: 400px;
+  }
+
+  .signupButton2 {
+    display: inline;
+  }
+  .secondLoginContainer form {
+    width: 100px;
+    align-items: center;
+  }
+  .secondLoginContainer form input {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .secondLoginContainer {
+    width: 250px;
+  }
+}
