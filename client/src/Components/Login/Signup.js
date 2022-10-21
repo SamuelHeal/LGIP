@@ -1,40 +1,40 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
+import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-import Modal from 'react-modal';
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+import Modal from "react-modal";
 
-import './signup.css';
-import Auth from '../utils/auth';
+import "./signup.css";
+import Auth from "../utils/auth";
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: '-3%',
-    marginRight: '-50%',
-    marginTop: '30px',
-    transform: 'translate(-50%, -50%)',
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "-3%",
+    marginRight: "-50%",
+    marginTop: "30px",
+    transform: "translate(-50%, -50%)",
   },
 };
 
 const Signup = () => {
   const [termsAgree, setTermsAgree] = useState(false);
   const [privacyAgree, setPrivacyAgree] = useState(false);
-  const [passwordError, setPasswordError] = useState('');
+  const [passwordError, setPasswordError] = useState("");
 
-  const [termsErrorMsg, setTermsErrorMsg] = useState('');
-  const [privacyErrorMsg, setPrivacyErrorMsg] = useState('');
+  const [termsErrorMsg, setTermsErrorMsg] = useState("");
+  const [privacyErrorMsg, setPrivacyErrorMsg] = useState("");
 
-  const [passwordState, setPasswordState] = useState('password');
-  const [iconClass, setIconClass] = useState('eyeIcon');
+  const [passwordState, setPasswordState] = useState("password");
+  const [iconClass, setIconClass] = useState("eyeIcon");
 
-  const [signupButton, setSignupButton] = useState('signupButton');
-  const [loader, setLoader] = useState('hideLoader');
+  const [signupButton, setSignupButton] = useState("signupButton");
+  const [loader, setLoader] = useState("hideLoader");
 
   const termsCheckboxHandler = () => {
     setTermsAgree(!termsAgree);
@@ -63,32 +63,32 @@ const Signup = () => {
 
   const bothTermsError = () => {
     setTermsErrorMsg(
-      'You must accept the terms and conditions before proceeding'
+      "You must accept the terms and conditions before proceeding"
     );
     setPrivacyErrorMsg(
-      'You must accept the privacy agreement before proceeding'
+      "You must accept the privacy agreement before proceeding"
     );
   };
 
   const termsError = () => {
     setTermsErrorMsg(
-      'You must accept the terms and conditions before proceeding'
+      "You must accept the terms and conditions before proceeding"
     );
-    setPrivacyErrorMsg('');
+    setPrivacyErrorMsg("");
   };
 
   const privacyError = () => {
-    setTermsErrorMsg('');
+    setTermsErrorMsg("");
     setPrivacyErrorMsg(
-      'You must accept the privacy agreement before proceeding'
+      "You must accept the privacy agreement before proceeding"
     );
   };
 
   const [formState, setFormState] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -103,12 +103,12 @@ const Signup = () => {
 
   const handlePasswordState = (event) => {
     event.preventDefault();
-    if (passwordState === 'password') {
-      setPasswordState('text');
-      setIconClass('eyeIcon2');
+    if (passwordState === "password") {
+      setPasswordState("text");
+      setIconClass("eyeIcon2");
     } else {
-      setPasswordState('password');
-      setIconClass('eyeIcon');
+      setPasswordState("password");
+      setIconClass("eyeIcon");
     }
   };
 
@@ -122,15 +122,15 @@ const Signup = () => {
       termsError();
     } else if (formState.password.length < 8) {
       setPasswordError(
-        'Password must be greater than or equal to 8 characters'
+        "Password must be greater than or equal to 8 characters"
       );
-      setTermsErrorMsg('');
-      setPrivacyErrorMsg('');
+      setTermsErrorMsg("");
+      setPrivacyErrorMsg("");
     } else {
-      setTermsErrorMsg('');
-      setPrivacyErrorMsg('');
-      setSignupButton('hideSignupButton');
-      setLoader('loader');
+      setTermsErrorMsg("");
+      setPrivacyErrorMsg("");
+      setSignupButton("hideSignupButton");
+      setLoader("loader");
       try {
         const { data } = await addUser({
           variables: { ...formState },
@@ -139,8 +139,8 @@ const Signup = () => {
         Auth.login(data.addUser.token);
       } catch (e) {
         console.error(e);
-        setLoader('hideLoader');
-        setSignupButton('signupButton');
+        setLoader("hideLoader");
+        setSignupButton("signupButton");
       }
     }
   };
@@ -281,7 +281,7 @@ const Signup = () => {
                     checked={termsAgree}
                   />
                   <label className='termsCheckbox' htmlFor='agree'>
-                    {' '}
+                    {" "}
                     <p>
                       I agree to the <b>terms and conditions</b>
                     </p>
@@ -295,7 +295,7 @@ const Signup = () => {
                     checked={privacyAgree}
                   />
                   <label className='termsCheckbox' htmlFor='agree'>
-                    {' '}
+                    {" "}
                     <p>
                       I agree to <b>privacy statement</b>
                     </p>
@@ -310,8 +310,11 @@ const Signup = () => {
           <div className='errorMsg'>{passwordError}</div>
           {error && <div className='errorMsg'>{error.message}</div>}
         </form>
-        <p>
-          Already have an account? Login <Link to='/login'>Here</Link>
+        <p className='loginDirect'>
+          Already have an account? Login{" "}
+          <Link className='loginLink' to='/login'>
+            Here
+          </Link>
         </p>
       </div>
     </div>

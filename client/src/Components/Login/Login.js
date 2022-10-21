@@ -95,7 +95,6 @@ const Login = (props) => {
       <div className='secondLoginContainer'>
         <div className='loginHeaderContainer'>
           <h1>Legends Investment Groups</h1>
-          <h2>Login</h2>
         </div>
         <form onSubmit={handleFormSubmit}>
           <input

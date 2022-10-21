@@ -8,10 +8,14 @@
   margin: auto;
 }
 
+.signUpContainer h2 {
+  color: var(--main-heading);
+}
+
 .eyeIcon {
   position: relative;
-  left: 100px;
-  top: -35px;
+  left: 90px;
+  top: -37px;
   /* z-index: 888; */
   margin: 0px;
   cursor: pointer;
@@ -19,12 +23,12 @@
 
 .eyeIcon2 {
   position: relative;
-  left: 100px;
-  top: -35px;
+  left: 90px;
+  top: -37px;
   /* z-index: 888; */
   margin: 0px;
   cursor: pointer;
-  color: #9c1616;
+  color: var(--main-heading);
 }
 
 .eyeIcon:hover {
@@ -58,11 +62,13 @@
 }
 .secondSignUpContainer {
   /* z-index: 999; */
-  background-color: white;
+  position: relative;
+  right: 300px;
+  /* background-color: var(--back-colour); */
   width: 30%;
-  min-width: 240px;
-  border-radius: 7px;
+  /* height: 40%; */
   padding: 20px;
+  border-radius: 7px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,18 +107,17 @@
 }
 .signUpContainer form input {
   margin-bottom: 10px;
-  background-color: white;
-  color: #3c4043;
+  background-color: var(--outline-colour);
+  color: var(--main-heading);
   border-bottom-style: solid;
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
-  border-color: #1f2c5c;
+  border-color: var(--outline-colour);
   border-width: 1px;
-  border-radius: 0px 0px 7px 7px;
-  width: 230px;
-  margin: 10px;
+  border-radius: 7px;
   height: 20px;
+  width: 200px;
   padding: 10px;
 }
 
@@ -140,13 +145,13 @@ li {
 }
 
 .signUpContainer ::placeholder {
-  color: #3c4043;
+  color: var(--secondary-heading);
 }
 
 .signupButton {
   font-size: 90%;
-  color: white;
-  background-color: #31458db2;
+  color: var(--colour);
+  background-color: var(--main-heading);
   width: 180px;
   margin: 5px;
   padding: 7px;
@@ -158,7 +163,7 @@ li {
 }
 
 .signupButton:hover {
-  background-color: #1f2c5c;
+  background-color: var(--secondary-heading);
   text-decoration: none;
 }
 
@@ -167,9 +172,18 @@ li {
 }
 .termsContainer {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 400px;
-  height: 400px;
+  height: 95%;
   margin: auto;
+  color: var(--secondary-colour);
+}
+
+.termsContainer h2 {
+  color: var(--main-heading);
 }
 
 .individualCheckbox {
@@ -200,6 +214,19 @@ li {
   color: red;
   font-size: 14px;
   margin: 5px;
+}
+
+.loginDirect {
+  color: var(--secondary-colour);
+}
+
+.loginDirect .loginLink {
+  color: var(--secondary-heading);
+  text-decoration: underline;
+}
+
+.loginDirect .loginLink:hover {
+  color: var(--main-heading);
 }
 
 .hideLoader {
@@ -340,7 +367,7 @@ li {
   position: absolute;
   z-index: -1;
   transform: rotate(45deg);
-  right: 250px;
+  right: 150px;
 }
 
 .stroke-animation1 {
@@ -362,37 +389,31 @@ li {
 
 @-webkit-keyframes stroke-color1 {
   0% {
-    stroke: rgb(23, 42, 105);
+    stroke: var(--main-heading);
   }
   25% {
-    stroke: rgb(60, 63, 218);
-  }
-  50% {
-    stroke: #405dc7;
+    stroke: var(--secondary-heading);
   }
   75% {
-    stroke: rgb(60, 63, 218);
+    stroke: var(--secondary-heading);
   }
   100% {
-    stroke: rgb(23, 42, 105);
+    stroke: var(--main-heading);
   }
 }
 
 @keyframes stroke-color1 {
   0% {
-    stroke: rgb(23, 42, 105);
+    stroke: var(--main-heading);
   }
   25% {
-    stroke: rgb(60, 63, 218);
-  }
-  50% {
-    stroke: #405dc7;
+    stroke: var(--secondary-heading);
   }
   75% {
-    stroke: rgb(60, 63, 218);
+    stroke: var(--secondary-heading);
   }
   100% {
-    stroke: rgb(23, 42, 105);
+    stroke: var(--main-heading);
   }
 }
 

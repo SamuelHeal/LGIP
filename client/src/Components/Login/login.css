@@ -10,7 +10,9 @@
 
 .secondLoginContainer {
   z-index: 999;
-  background-color: white;
+  position: relative;
+  right: 300px;
+  /* background-color: var(--back-colour); */
   width: 30%;
   /* height: 40%; */
   padding: 20px;
@@ -35,10 +37,12 @@
   position: relative;
   top: 20px;
   margin: 10px;
+  color: var(--main-heading);
 }
 
 .loginHeaderContainer h2 {
   margin: 0px;
+  color: var(--secondary-heading);
 }
 
 .registerLink {
@@ -60,28 +64,28 @@
 
 .secondLoginContainer form input {
   margin-bottom: 10px;
-  background-color: white;
-  color: #3c4043;
+  background-color: var(--outline-colour);
+  color: var(--main-heading);
   border-bottom-style: solid;
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
-  border-color: #1f2c5c;
+  border-color: var(--outline-colour);
   border-width: 1px;
-  border-radius: 0px 0px 0px 7px;
+  border-radius: 7px;
   height: 20px;
   width: 200px;
   padding: 10px;
 }
 
 .secondLoginContainer ::placeholder {
-  color: #3c4043;
+  color: var(--secondary-heading);
 }
 
 .loginButton {
-  font-size: 110%;
-  color: white;
-  background-color: #31458db2;
+  /* font-size: 110%; */
+  color: var(--colour);
+  background-color: var(--main-heading);
   width: 120px;
   margin: 5px;
   padding: 5px;
@@ -93,7 +97,7 @@
 }
 
 .loginButton:hover {
-  background-color: #1f2c5c;
+  background-color: var(--secondary-heading);
   text-decoration: none;
 }
 
@@ -242,7 +246,7 @@
   position: absolute;
   z-index: 1;
   transform: rotate(45deg);
-  right: 250px;
+  right: 200px;
 }
 
 .stroke-animation1 {
@@ -264,37 +268,37 @@
 
 @-webkit-keyframes stroke-color1 {
   0% {
-    stroke: rgb(23, 42, 105);
+    stroke: var(--main-heading);
   }
   25% {
-    stroke: rgb(60, 63, 218);
+    stroke: var(--secondary-heading);
   }
   50% {
     stroke: #405dc7;
   }
   75% {
-    stroke: rgb(60, 63, 218);
+    stroke: var(--secondary-heading);
   }
   100% {
-    stroke: rgb(23, 42, 105);
+    stroke: var(--main-heading);
   }
 }
 
 @keyframes stroke-color1 {
   0% {
-    stroke: rgb(23, 42, 105);
+    stroke: var(--main-heading);
   }
   25% {
-    stroke: rgb(60, 63, 218);
+    stroke: var(--secondary-heading);
   }
   50% {
     stroke: #405dc7;
   }
   75% {
-    stroke: rgb(60, 63, 218);
+    stroke: var(--secondary-heading);
   }
   100% {
-    stroke: rgb(23, 42, 105);
+    stroke: var(--main-heading);
   }
 }
 

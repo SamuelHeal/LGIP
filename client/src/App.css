@@ -1,6 +1,15 @@
+:root {
+  --colour: white;
+  --secondary-colour: #6b6e70;
+  --main-heading: #86c232;
+  --secondary-heading: #61892f;
+  --outline-colour: #474b4f;
+  --background-colour: #222629;
+}
+
 body {
-  color: #3c4043;
-  background-color: #1a1a1d;
+  color: var(--colour);
+  background-color: var(--background-colour);
 }
 
 html {
